@@ -1,0 +1,37 @@
+name: 📝 Feedback / 反馈
+description: Share feedback, a correction, or a suggestion for the handbook. 分享反馈、纠错或建议。
+title: "[Feedback]: "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the Agentic Coding Handbook!
+        感谢帮助改进这本手册！
+  - type: input
+    id: page
+    attributes:
+      label: Which page? / 哪一页？
+      description: URL or title of the page this is about (optional). 相关页面的链接或标题（可选）。
+      placeholder: e.g. /stack/models-compared
+    validations:
+      required: false
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type / 类型
+      options:
+        - Correction / inaccuracy — 纠错 / 不准确
+        - Suggestion / improvement — 建议 / 改进
+        - Something's confusing — 有点看不懂
+        - Broken link or bug — 链接失效 / 问题
+        - Other — 其他
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details / 详情
+      description: What would you like us to know? 你想告诉我们什么？
+    validations:
+      required: true

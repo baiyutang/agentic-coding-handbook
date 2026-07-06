@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# Local planning / spec docs (not for publication)
+.superpowers/
+
+# Env
+.env
+.env.local
+
+# IDE / tooling
+.vscode/
+.idea/
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db

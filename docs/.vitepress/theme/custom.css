@@ -1,0 +1,20 @@
+/* Light-touch brand accent over VitePress defaults — violet, to fit an
+   "AI / agent" handbook. Everything else keeps VitePress's clean look. */
+
+:root {
+	--vp-c-brand-1: #5f3dff;
+	--vp-c-brand-2: #6c4cff;
+	--vp-c-brand-3: #7c5cff;
+	--vp-c-brand-soft: rgba(108, 76, 255, 0.14);
+
+	/* Home hero: subtle violet gradient on the product name. */
+	--vp-home-hero-name-color: transparent;
+	--vp-home-hero-name-background: linear-gradient(120deg, #6c4cff 30%, #a17bff);
+}
+
+.dark {
+	--vp-c-brand-1: #a692ff;
+	--vp-c-brand-2: #9075ff;
+	--vp-c-brand-3: #6c4cff;
+	--vp-c-brand-soft: rgba(140, 111, 255, 0.18);
+}
