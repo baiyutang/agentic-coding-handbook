@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Agentic Coding Handbook
   text: Build software with AI agents
-  tagline: A practical guide — from first principles to production workflows.
+  tagline: A practical guide to agentic coding and AI-assisted development — from first principles to production workflows.
   actions:
     - theme: brand
       text: Get Started

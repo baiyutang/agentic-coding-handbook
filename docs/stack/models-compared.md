@@ -1,6 +1,6 @@
 ---
 title: Models Compared
-description: How the major model families differ — strengths, context, and where each fits for coding.
+description: Claude vs GPT vs Gemini vs DeepSeek vs Kimi — a practical comparison of AI coding models by benchmark, context window, strengths, and pricing.
 ---
 
 # Models Compared

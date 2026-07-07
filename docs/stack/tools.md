@@ -1,6 +1,6 @@
 ---
 title: AI Coding Tools Compared
-description: CLI agents, AI-native IDEs, and editor extensions — how they differ and how to choose.
+description: Claude Code vs Cursor vs Copilot vs Windsurf vs Trae — compare AI coding tools by capability, pricing, and best-fit use cases.
 ---
 
 # AI Coding Tools Compared

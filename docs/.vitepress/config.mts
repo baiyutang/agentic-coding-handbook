@@ -142,12 +142,42 @@ const zhSidebar = [
   },
 ]
 
+const siteUrl = 'https://aicode.gokr.io'
+const siteTitle = 'Agentic Coding Handbook'
+const siteDesc = 'A practical guide to agentic coding and AI-assisted software development — models, tools, workflows, and prompting patterns for engineers.'
+
 export default defineConfig({
-  title: 'Agentic Coding Handbook',
-  description: 'A practical guide to building software with AI agents.',
+  title: siteTitle,
+  description: siteDesc,
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: false,
+
+  sitemap: { hostname: siteUrl },
+
+  head: [
+    ['meta', { name: 'keywords', content: 'agentic coding, AI coding, AI-assisted development, Claude Code, LLM coding, AI programming, software engineering, prompt engineering, 智能编程, AI 编程, agentic development' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: siteTitle }],
+    ['meta', { property: 'og:url', content: siteUrl }],
+    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:site', content: '@baiyutang' }],
+    ['link', { rel: 'canonical', href: siteUrl }],
+  ],
+
+  transformPageData(pageData) {
+    const title = pageData.title ? `${pageData.title} | ${siteTitle}` : siteTitle
+    const desc = pageData.description || siteDesc
+    const url = `${siteUrl}/${pageData.relativePath.replace(/\.md$/, '').replace(/index$/, '')}`
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push(
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: desc }],
+      ['meta', { property: 'og:url', content: url }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: desc }],
+    )
+  },
 
   markdown: {
     config: (md) => {

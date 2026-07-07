@@ -1,6 +1,6 @@
 ---
 title: What is Agentic Coding?
-description: Understanding the shift from code generation to agent-driven development.
+description: What is agentic coding? Learn how AI coding agents differ from copilots — and why delegating whole features to an agent changes how engineers work.
 ---
 
 Agentic coding is a new paradigm for building software. Instead of asking an AI to generate a snippet and then wiring it up yourself, you give an AI agent access to your codebase and tools, and it plans, implements, tests, and iterates autonomously.
