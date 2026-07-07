@@ -1,118 +1,111 @@
 ---
 title: Models Compared
-description: Claude vs GPT vs Gemini vs DeepSeek vs Kimi — a practical comparison of AI coding models by benchmark, context window, strengths, and pricing.
+description: Claude vs GPT vs Gemini vs DeepSeek vs Kimi — a three-dimensional comparison of AI coding models by capability benchmark, pricing per million tokens, and best-fit use case.
 ---
 
 # Models Compared
 
-[Choosing a Model](/stack/models) covered the durable principle — match the tier to the task.
-This page maps the **landscape** across providers so you know what you're choosing between.
-For current prices and plans, see [Plans & Pricing](/stack/pricing).
+Choosing a model has three dimensions that don't always move together: **capability** (can it
+solve the problem?), **price** (what does it cost per token?), and **scenario fit** (is it the
+right tool for this task?).
 
-::: warning Fast-moving
-Model lineups change every few weeks. The **positioning** below is durable; specific version
-names and numbers are a snapshot (mid-2026) — verify against each provider's docs.
+::: warning Fast-moving snapshot
+Model lineups change every few weeks. Data below is a snapshot from **mid-2026** — always
+verify against the linked official sources.
 :::
 
-## The Providers at a Glance
+## Dimension 1: Capability Baseline
 
-| Provider | Open weights? | Standout strength | Notable for agentic coding |
-|---|---|---|---|
-| **Anthropic — Claude** | No | Coding, instruction-following, long autonomous runs | Powers Claude Code; the agentic-coding benchmark to beat |
-| **OpenAI — GPT / o-series** | No | Breadth of ecosystem, strong reasoning | Widest tooling support; deep reasoning models (o-series) |
-| **Google — Gemini** | No | Huge context (up to ~2M tokens), multimodal | Best for very large codebases and mixed media; generous free tier |
-| **DeepSeek** | Yes | Cost-to-performance | Very cheap; OpenAI/Anthropic-compatible API; big context |
-| **Moonshot — Kimi** | Yes | Long-horizon coding | Open weights that rival closed models on coding; own CLI |
-| **Zhipu — GLM** | Yes | Long autonomous agent runs | Project-level engineering at low cost; open weights |
+The most-cited coding benchmark is **SWE-bench Verified** — the share of real GitHub issues a
+model resolves autonomously. Higher is better.
 
-## Capability Benchmarks
-
-The most-cited **capability baseline for coding** is **SWE-bench Verified** — the share of
-real GitHub issues a model resolves autonomously. Higher is better. A public snapshot
-(mid-2026):
-
-| Model | Weights | SWE-bench Verified |
-|---|---|---|
-| **Claude Fable 5** | Closed | ~95.0% * |
-| **OpenAI GPT-5.5** | Closed | ~88.7% |
-| **Claude Opus 4.8** | Closed | ~88.6% |
-| **Claude Opus 4.7** | Closed | ~82.0% |
-| **DeepSeek V4 Pro** | Open | ~80.6% |
-| **Kimi K2.6** | Open | ~80.2% |
-| **Gemini 3.5 Flash** | Closed | ~78.8% |
-
-\* Claude Fable 5 tops the list but was suspended under a June 2026 export-control directive —
-listed for reference. On the harder **SWE-bench Pro**, GLM-5.2 leads open-weight models
-(~62%); Pro scores run lower across the board and aren't comparable to Verified.
+| Model | SWE-bench Verified | Context Window | Open Weights | Docs |
+|---|---|---|---|---|
+| **Claude Fable 5** | ~95% | 1M tokens | No | [Anthropic](https://platform.claude.com/docs/en/about-claude/models/overview) |
+| **GPT-5.5** | ~88.7% | 128K tokens | No | [OpenAI](https://platform.openai.com/docs/models) |
+| **Claude Opus 4.8** | ~88.6% | 1M tokens | No | [Anthropic](https://platform.claude.com/docs/en/about-claude/models/overview) |
+| **Gemini 3.1 Pro** | — | **2M tokens** | No | [Google](https://ai.google.dev/gemini-api/docs/models) |
+| **DeepSeek V4** | ~80.6% | 128K tokens | **Yes** | [DeepSeek](https://api-docs.deepseek.com) |
+| **Kimi K2.6** | ~80.2% | 128K tokens | **Yes** | [Moonshot](https://platform.moonshot.ai) |
+| **Gemini 2.5 Flash** | — | 1M tokens | No | [Google](https://ai.google.dev/gemini-api/docs/models) |
+| **Claude Sonnet 4.6** | — | 1M tokens | No | [Anthropic](https://platform.claude.com/docs/en/about-claude/models/overview) |
+| **Claude Haiku 4.5** | — | 200K tokens | No | [Anthropic](https://platform.claude.com/docs/en/about-claude/models/overview) |
+| **DeepSeek V4 Flash** | — | 128K tokens | **Yes** | [DeepSeek](https://api-docs.deepseek.com) |
 
 ::: warning Read benchmarks with caution
-Scores vary by evaluation harness and shift with every model version — treat these as a rough
-baseline, not gospel. A benchmark measures one dimension; your real choice also depends on
-[cost](/stack/pricing), speed, context size, and reliability on *your* tasks.
+Scores vary by evaluation harness and shift with every release. Treat these as a rough
+baseline — your real choice also depends on cost, speed, and reliability on *your* tasks.
 :::
 
-**Sources:**
-[SWE-bench (official)](https://www.swebench.com/) ·
+**Sources:** [SWE-bench official](https://www.swebench.com/) ·
 [llm-stats leaderboard](https://llm-stats.com/benchmarks/swe-bench-verified) ·
-[BenchLM](https://benchlm.ai/benchmarks/sweVerified) ·
-[Vals AI](https://www.vals.ai/benchmarks/swebench) ·
-[SWE-bench Pro (Morph)](https://www.morphllm.com/swe-bench-pro). Figures as of mid-2026;
-verify current numbers on the leaderboards.
+[Morph SWE-bench Pro](https://www.morphllm.com/swe-bench-pro) ·
+[Artificial Analysis](https://artificialanalysis.ai/models)
 
-## Western Frontier Labs
+## Dimension 2: Pricing Snapshot
 
-**Anthropic (Claude)** — Widely regarded as the strongest family for **coding and agentic
-workflows**: careful instruction-following, reliable tool use, and stamina over long,
-multi-step tasks. The lineup tiers from a top model down through a balanced default to a fast,
-cheap tier (see [choosing a model](/stack/models)). It's what [Claude Code](/reference/claude-code)
-runs on, and the reference point most coding tools benchmark against.
+Per **1 million tokens**, input / output, standard on-demand (mid-2026):
 
-**OpenAI (GPT + o-series)** — The broadest ecosystem and the widest range of models, from
-frontier general models to dedicated **reasoning** models (the o-series) tuned for hard,
-multi-step problems. If you want the most third-party integrations and a model for nearly any
-budget or task, GPT is the safe generalist.
+| Model | Input / 1M | Output / 1M | Notes |
+|---|---|---|---|
+| **Gemini 3.1 Flash-Lite** | $0.10 | $0.40 | Budget |
+| **DeepSeek V4 Flash** | $0.14 | $0.28 | Cheapest strong model |
+| **Gemini 2.5 Flash** | $0.15 | $0.60 | Google fast tier |
+| **Kimi K2.6** | ~$0.60 | ~$2.50 | Open weights; price varies by host |
+| **DeepSeek V4 Pro** | $1.74 | $3.48 | Open weights, high capability |
+| **Gemini 3.1 Pro** | $2 | $12 | Large context premium |
+| **GPT-5.4** | $2.50 | $15 | OpenAI mainstream |
+| **Claude Sonnet 4.6** | $3 | $15 | Balanced workhorse |
+| **Claude Opus 4.8** | $5 | $25 | Top coding capability |
+| **GPT-5.5** | $5 | $30 | Frontier reasoning |
 
-**Google (Gemini)** — The **context and multimodal** leader: context windows up to roughly two
-million tokens let it hold very large codebases or long documents at once, and it handles
-images/video natively. The consumer free tier is unusually generous. Reach for Gemini when
-raw context size or mixed media is the constraint.
+::: tip Sticker price vs real bill
+Most providers offer large discounts not shown above: **prompt caching** (~90% off repeated
+context), **batch APIs** (~50% off async work), and **Flex tiers** (e.g. AWS Bedrock Flex at
+50% off on-demand). See [Plans & Pricing](/stack/pricing) for cloud platform options.
+:::
 
-## Open-Weight Challengers
+Sources: [Claude](https://platform.claude.com/docs/en/about-claude/pricing) ·
+[OpenAI](https://platform.openai.com/docs/pricing) ·
+[Gemini](https://ai.google.dev/gemini-api/docs/pricing) ·
+[DeepSeek](https://api-docs.deepseek.com/quick_start/pricing) ·
+[Kimi](https://platform.moonshot.ai/) ·
+[BenchLM](https://benchlm.ai/llm-pricing)
 
-A wave of strong **open-weight** models — mostly from Chinese labs — now rivals closed frontier
-models on coding while costing a fraction as much. They're also self-hostable and typically
-expose OpenAI/Anthropic-compatible APIs, so tools can adopt them with little friction.
+## Dimension 3: Scenario Fit
 
-**DeepSeek** — The value benchmark. Its models deliver strong coding and reasoning at some of
-the lowest prices anywhere, with thinking/non-thinking modes and large context. A drop-in
-choice when cost matters and you want compatibility with existing tooling.
+Match the task to the right model tier — not every task needs the strongest or most expensive
+model.
 
-**Moonshot (Kimi)** — Its open models target **long-horizon coding**, UI generation, and
-multi-agent orchestration, and have traded blows with top closed models on coding benchmarks.
-Moonshot also ships its own CLI ([Kimi Code](/stack/tools)), making it a full stack, not just a model.
+| Scenario | Recommended tier | Why |
+|---|---|---|
+| Complex agentic tasks, long autonomous runs | Claude Opus 4.8 / GPT-5.5 | Reliability over many steps |
+| Everyday feature development | Claude Sonnet 4.6 / GPT-5.4 | Best capability-to-cost ratio |
+| High-volume completions, mechanical tasks | Gemini Flash / Claude Haiku / DeepSeek Flash | Speed + minimal cost |
+| Very large codebases (>500K tokens) | Gemini 3.1 Pro | 2M token context window |
+| Self-hosting / data must not leave premises | DeepSeek V4 / Kimi K2.6 / GLM-5 | Open weights, self-deployable |
+| Budget-first, still capable | DeepSeek V4 Flash | $0.14/1M input — cheapest strong option |
+| Deep reasoning on hard algorithmic problems | OpenAI o-series / Claude Opus | Built-in chain-of-thought |
 
-**Zhipu (GLM)** — Positioned for **project-level software engineering** and long autonomous
-runs (hours of continuous work on one task), at low cost. Another strong open-weight option
-for agentic coding where you want capability without frontier prices.
+## How to Combine Models
 
-## How to Actually Choose
+The most effective setups use different tiers for different stages of work:
 
-- **Best coding + agentic reliability, cost secondary** → Claude (top or balanced tier)
-- **Deepest reasoning on hard problems** → OpenAI o-series, or a top Claude/GPT tier
-- **Enormous context or multimodal** → Gemini
-- **Lowest cost, still strong** → DeepSeek, Kimi, or GLM (open weights)
-- **Self-hosting / data stays in-house** → an open-weight model (DeepSeek / Kimi / GLM)
+- **Planning and architecture** → top model (Opus 4.8, GPT-5.5): gets it right the first time,
+  cheaper overall
+- **Coding and iteration** → mid model (Sonnet 4.6, GPT-5.4): fast enough, capable enough
+- **Bulk / mechanical work** → fast model (Haiku, Flash, DeepSeek Flash): completions, test
+  generation, boilerplate
 
-You're not locked in. Most [tools](/stack/tools) let you switch providers, and many teams use a
-frontier model for planning and a cheap open-weight model for mechanical execution — the same
-[strong-for-thinking, fast-for-typing principle](/stack/models) applied across vendors.
+Most [tools](/stack/tools) support switching models per task or conversation.
 
 ## Sources
 
-Figures and lineups as of mid-2026, from provider documentation:
-[Claude](https://platform.claude.com/docs/en/about-claude/models/overview) ·
-[OpenAI](https://platform.openai.com/docs/models) ·
-[Gemini](https://ai.google.dev/gemini-api/docs/models) ·
-[DeepSeek](https://api-docs.deepseek.com/quick_start/pricing) ·
-[Kimi](https://platform.moonshot.ai/) ·
-[GLM / Z.ai](https://z.ai/). Always verify current details against these.
+Data as of mid-2026. Always verify:
+[Anthropic models](https://platform.claude.com/docs/en/about-claude/models/overview) ·
+[OpenAI models](https://platform.openai.com/docs/models) ·
+[Gemini models](https://ai.google.dev/gemini-api/docs/models) ·
+[DeepSeek API](https://api-docs.deepseek.com/quick_start/pricing) ·
+[Moonshot Kimi](https://platform.moonshot.ai/) ·
+[Artificial Analysis](https://artificialanalysis.ai/models) ·
+[SWE-bench](https://www.swebench.com/)

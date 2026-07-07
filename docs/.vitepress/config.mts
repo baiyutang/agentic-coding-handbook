@@ -35,8 +35,9 @@ const enSidebar = [
     items: [
       { text: 'Overview', link: '/stack/' },
       { text: 'AI Coding Tools Compared', link: '/stack/tools' },
-      { text: 'Choosing a Model', link: '/stack/models' },
+      { text: 'Tool Decision Map', link: '/stack/tool-decision-map' },
       { text: 'Models Compared', link: '/stack/models-compared' },
+      { text: 'Choosing a Model', link: '/stack/models' },
       { text: 'Plans & Pricing', link: '/stack/pricing' },
       { text: 'Cost & Efficiency', link: '/stack/cost' },
       { text: 'The 10x Engineer', link: '/stack/going-10x' },
@@ -96,8 +97,9 @@ const zhSidebar = [
     items: [
       { text: '概览', link: '/zh/stack/' },
       { text: 'AI 编码工具对比', link: '/zh/stack/tools' },
-      { text: '模型选择', link: '/zh/stack/models' },
+      { text: '工具决策地图', link: '/zh/stack/tool-decision-map' },
       { text: '模型对比', link: '/zh/stack/models-compared' },
+      { text: '模型选择', link: '/zh/stack/models' },
       { text: '订阅与价格', link: '/zh/stack/pricing' },
       { text: '成本与效率', link: '/zh/stack/cost' },
       { text: '迈向 10x 工程师', link: '/zh/stack/going-10x' },

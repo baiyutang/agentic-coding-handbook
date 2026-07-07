@@ -1,81 +1,114 @@
 ---
 title: AI 编码工具对比
-description: CLI agent、AI 原生 IDE、编辑器插件 —— 区别在哪、怎么选。
+description: AI 编码工具全景 —— CLI Agent、AI 原生 IDE、编辑器插件、云厂商工具、自主 Agent 平台，按能力、定价和最佳适用场景对比。
 ---
 
 # AI 编码工具对比
 
-没有单一"最好"的 AI 编码工具 —— 只有最适合你工作方式的那个。它们大致分三类，每类在**自主性**和**掌控感**之间的权衡不同。
+方法论比工具更重要——但工具决定你的天花板。以下是截至 2026 年中的完整工具全景，按五大类别组织。
 
-## 三大类别
+## 五大类别
 
 ### 1. CLI Agent
 
-运行在终端里，面向整个仓库，自主行动 —— 规划、跨文件编辑、运行命令、迭代。
+运行在终端里，面向整个仓库自主行动——规划、跨文件编辑、运行命令、迭代。最适合整任务委派，无需切换编辑器。
 
-- **代表：** Claude Code、Aider、Kimi Code（Moonshot 的 CLI，默认用其 Kimi 模型）
-- **强项：** 自主性高、完整项目上下文、可脚本化，擅长跨文件功能与重构，能与你现有的编辑器和 shell 组合
-- **权衡：** 可视化弱；你审查的是 diff，而不是盯着编辑器
+- **代表：** [Claude Code](https://claude.ai/code) · [OpenCode](https://opencode.ai) ·
+  [Aider](https://aider.chat) · [Codex CLI](https://github.com/openai/codex) ·
+  [Kimi Code](https://kimi.moonshot.cn)
+- **强项：** 自主性高、完整项目上下文、可脚本化，擅长跨文件功能与重构
+- **权衡：** 编辑器内无可视化 diff；你通过终端里的 diff 审查变更
 - **适合：** 熟悉终端、想把整个任务交出去的开发者
 
 ### 2. AI 原生 IDE
 
-一个围绕 AI 打造的完整编辑器（通常是 VS Code 的分支），把行内补全、对话、agent 模式整合在一处。
+围绕 AI 打造的完整编辑器（通常是 VS Code 的分支），把行内补全、对话、agent 模式整合在一处。
 
-- **代表：** Cursor、Windsurf、Trae（字节跳动）
-- **强项：** 编辑循环紧凑、能看到你正在看的内容、行内建议顺滑、可视化 diff，适合探索性和 UI 工作
-- **权衡：** 需要换编辑器；自主性介于补全和完整 agent 之间
-- **适合：** 想把 AI 编织进熟悉 IDE 体验的开发者
+- **代表：** [Cursor](https://cursor.com) · [Windsurf](https://codeium.com/windsurf) ·
+  [Trae](https://trae.ai)
+- **强项：** 编辑循环紧凑、可视化 diff、行内建议顺滑、能感知你正在看的内容
+- **权衡：** 需要换编辑器；自主性介于补全和完整 CLI 委派之间
+- **适合：** 想把 AI 深度融入熟悉 IDE 体验的开发者
 
 ### 3. 编辑器插件
 
-给你已经在用的编辑器加上 AI，从自动补全到对话面板再到 agent 模式。
+给你已有的编辑器加上 AI 能力——从自动补全到对话面板，再到自主 agent 模式。
 
-- **代表：** GitHub Copilot、Cline（VS Code）
-- **强项：** 零切换成本、补全能力强、可渐进采用
-- **权衡：** 历史上更偏补全（不过 agent 模式正在快速追平）；上下文通常比 CLI agent 窄
-- **适合：** 想在现有环境里用上 AI、又不想换工具的团队
+- **代表：** [GitHub Copilot](https://github.com/features/copilot) ·
+  [Cline](https://github.com/cline/cline) · [Continue.dev](https://continue.dev) ·
+  [Kilo Code](https://kilocode.ai)
+- **强项：** 零切换成本、可渐进采用，开源选项（Cline、Continue）支持自带模型
+- **权衡：** 上下文通常比 CLI Agent 窄；自主能力参差不齐
+- **适合：** 不换工具、想在现有环境里用上 AI 的团队
 
-### 4. 自主平台
+### 4. 云厂商工具
 
-一个更新的类别模糊了边界 —— 多界面平台（桌面应用 + CLI + IDE 插件 + 云端 agent），为跨大型代码库的端到端自主工作而建。
+由各大云厂商自研的 AI 编码助手，与其更广泛的生态系统（CI/CD、安全扫描、云控制台）深度集成。
 
-- **代表：** Qoder（桌面/CLI/JetBrains 插件/云端，多 agent，大代码库分析）
-- **强项：** 自主性极高、持久记忆、同时跨多个界面工作
-- **权衡：** 更新、更不标准化；要学的更多；你把很多自主性托付出去了
-- **适合：** 正在推进重度委派、[多 agent](/zh/workflows/multi-agent) 工作流的团队
+- **代表：** [AWS Q Developer](https://aws.amazon.com/q/developer/) ·
+  [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview) ·
+  [Qoder CN](https://lingma.aliyun.com)（阿里云，前身通义灵码）·
+  [ArkClaw](https://www.volcengine.com/product/ark)（字节跳动/火山引擎）
+- **强项：** 企业 SSO/审计、云生态集成、合规友好、团队管理
+- **权衡：** 绑定单一厂商生态；模型选择通常受限
+- **适合：** 企业团队、有数据驻留或合规要求的项目
+
+### 5. 自主 Agent 平台
+
+为完全自主的、长时间运行的软件工程任务而设计——更接近"分配工单"而非"结对编程"。
+
+- **代表：** [OpenHands](https://github.com/All-Hands-AI/OpenHands) ·
+  [Goose](https://github.com/block/goose) · [Qoder](https://qoder.ai)
+- **强项：** 极高自主性、持久记忆、专为 issue 解决和功能级任务设计
+- **权衡：** 人工介入少；更新、更不标准化
+- **适合：** 正在推进重度委派[多 agent](/zh/workflows/multi-agent) 工作流的团队
 
 ## 快速对比
 
-| 工具 | 类别 | 模型 | 亮点 |
-|---|---|---|---|
-| **Claude Code** | CLI agent | Claude | agentic 可靠性、长任务 |
-| **Aider** | CLI agent | 自带 key | 开源、git 原生、便宜 |
-| **Kimi Code** | CLI agent | Kimi（Moonshot） | 开源权重后端、低成本 |
-| **Cursor** | AI 原生 IDE | 多厂商 | 打磨精致的行内 + agent 体验 |
-| **Windsurf** | AI 原生 IDE | 多厂商 | 全代码库上下文（Cascade） |
-| **Trae** | AI 原生 IDE | 多厂商 | 字节跳动的 AI IDE |
-| **GitHub Copilot** | 插件 | 多厂商 | 最知名；活在你的编辑器里 |
-| **Cline** | 插件 | 自带 key | 开源、在 VS Code 里自主 |
-| **Qoder** | 自主平台 | "最新模型" | 多界面、多 agent |
+| 工具 | 类别 | 授权 | 模型 | 定价 | 亮点 |
+|---|---|---|---|---|---|
+| [Claude Code](https://claude.ai/code) | CLI Agent | 专有 | 仅 Claude | $100/月 Max 或按 API | 最佳 agentic 可靠性；长任务 |
+| [OpenCode](https://opencode.ai) | CLI Agent | MIT | 75+ 提供商 | 免费（BYOK） | 最多星标开源 CLI（160K ⭐） |
+| [Aider](https://aider.chat) | CLI Agent | Apache 2.0 | BYOK | 免费（BYOK） | Git 原生、久经考验的开源工具 |
+| [Codex CLI](https://github.com/openai/codex) | CLI Agent | Apache 2.0 | OpenAI | 免费（BYOK） | OpenAI 官方开源 CLI（60K ⭐） |
+| [Kimi Code](https://kimi.moonshot.cn) | CLI Agent | 专有 | Kimi | 按 token 付费 | Moonshot 自研 CLI + 开源权重模型 |
+| [Cursor](https://cursor.com) | AI 原生 IDE | 专有 | 多厂商 | $20–$200/月 | 打磨精致的行内 + agent；最佳跨文件编辑 |
+| [Windsurf](https://codeium.com/windsurf) | AI 原生 IDE | 专有 | 多厂商 | 免费–$200/月 | 全代码库上下文（Cascade） |
+| [Trae](https://trae.ai) | AI 原生 IDE | 专有 | 多厂商 | 见官网 | 字节跳动的 AI IDE |
+| [GitHub Copilot](https://github.com/features/copilot) | 插件 | 专有 | 多厂商 | 免费–$39/月 | 最知名；支持 VS Code、JetBrains、Neovim |
+| [Cline](https://github.com/cline/cline) | 插件 | Apache 2.0 | BYOK | 免费（BYOK） | 透明逐步 agent；58K ⭐ |
+| [Continue.dev](https://continue.dev) | 插件 | Apache 2.0 | BYOK | 免费–$20/席 | VS Code + JetBrains；对话+补全+agent |
+| [Kilo Code](https://kilocode.ai) | 插件 | Apache 2.0 | BYOK | 免费（BYOK） | 同时支持 VS Code 和 JetBrains |
+| [AWS Q Developer](https://aws.amazon.com/q/developer/) | 云厂商 | 专有 | AWS 模型 | 免费–$19/用户 | 深度 AWS 集成、安全扫描 |
+| [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview) | 云厂商 | 专有 | Gemini | $19–$45/用户 | GCP 原生；Gemini 2.5 Pro |
+| [Qoder CN](https://lingma.aliyun.com) | 云厂商 | 专有 | 通义 + 其他 | Credits 制 | 阿里云；国内合规 |
+| [ArkClaw](https://www.volcengine.com/product/ark) | 云厂商 | 专有 | 豆包/DeepSeek/Kimi/GLM | 见 Coding Plan | 字节跳动；6 款模型自由切换 |
+| [OpenHands](https://github.com/All-Hands-AI/OpenHands) | 自主平台 | MIT | BYOK | 免费（BYOK） | 68K ⭐；解决 50%+ 真实 GitHub issue |
+| [Goose](https://github.com/block/goose) | 自主平台 | Apache 2.0 | BYOK | 免费（BYOK） | 编辑器无关；Agentic AI Foundation |
 
-各工具如何计费见[订阅与价格](/zh/stack/pricing)。
+::: tip 所有 BYOK 工具都支持通过 Ollama 使用本地模型
+OpenCode、Aider、Cline、Continue.dev——任何 BYOK 工具都可以路由到本地 Ollama 模型。零数据传输，零 token 费用。
+:::
 
 ## 怎么选
 
 | 如果你想要…… | 就选 |
 |---|---|
-| 对整个任务有最大自主性 | **CLI Agent**（Claude Code、Aider、Kimi Code） |
-| AI 融入完整编辑器 | **AI 原生 IDE**（Cursor、Windsurf、Trae） |
-| 保持编辑器不变 | **插件**（Copilot、Cline） |
-| 重度委派的多 agent 工作 | **自主平台**（Qoder） |
-| 可脚本化 / 适配 CI 的自动化 | **CLI Agent** |
-| 最低成本 / 自托管 | 搭配**开源权重模型**的 CLI 或插件 |
+| 对整个任务有最大自主性 | CLI Agent（Claude Code、OpenCode、Aider） |
+| AI 融入完整编辑器 | AI 原生 IDE（Cursor、Windsurf） |
+| 保持当前编辑器不变 | 插件（Copilot、Cline、Continue.dev） |
+| 企业 SSO / 审计 / 合规 | 云厂商工具（Q Developer、Gemini Code Assist） |
+| 国内数据驻留 / 合规 | Qoder CN、ArkClaw |
+| 完全自主处理 issue | 自主平台（OpenHands、Qoder） |
+| 最低成本，优先开源 | OpenCode / Aider / Cline + 开源权重模型 BYOK |
+| 自托管，数据不出服务器 | Tabby + 本地模型（Ollama） |
+| 可脚本化 / CI 友好的自动化 | CLI Agent |
 
 ## 不必只选一个
 
-很多强力工作流是组合出来的：用 CLI agent 做大功能和重构，同时在编辑器里用行内补全处理零碎。这几类是互补而非对立 —— **按任务选，而不是按职业生涯选**。
+很多强力工作流是组合出来的：用 CLI Agent 做大功能和重构，同时用插件处理日常补全，
+再用自主平台在夜间解锁 issue。这几类是互补而非对立。
 
-::: tip 提示
-无论选哪个，[方法论](/zh/guides/)都是可迁移的。Prompting、规划、[验证循环](/zh/guides/verification)在每一个工具里都能带来回报。
-:::
+→ 场景驱动选型：**[工具决策地图](/zh/stack/tool-decision-map)**
+→ 模型选择：**[模型对比](/zh/stack/models-compared)**
+→ 定价详情：**[订阅与价格](/zh/stack/pricing)**

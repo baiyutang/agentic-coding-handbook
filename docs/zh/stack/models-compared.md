@@ -1,88 +1,101 @@
 ---
 title: 模型对比
-description: 主流模型家族有何不同 —— 强项、上下文，以及各自在编码里的位置。
+description: Claude vs GPT vs Gemini vs DeepSeek vs Kimi —— 从能力基准、每百万 token 定价、最佳适用场景三个维度横向对比主流 AI 编码模型。
 ---
 
 # 模型对比
 
-[模型选择](/zh/stack/models)讲的是经得起时间的原则 —— 让层级匹配任务。这一页画出跨厂商的**格局**，让你知道自己在哪些选项之间做取舍。当前价格和套餐见[订阅与价格](/zh/stack/pricing)。
+选择模型有三个维度，它们并不总是同向移动：**能力**（能解决问题吗？）、**价格**（每 token 多少钱？）、**场景适配**（这个任务适合它吗？）。本页从三个维度全面呈现。
 
-::: warning 快速变化
-模型产品线每隔几周就变。下面的**定位**是稳定的；具体版本名和数字是快照（2026 年中）—— 请以各厂商文档为准。
+::: warning 快速变化的快照
+模型阵容每隔几周就会更新。以下数据是 **2026 年中** 的快照——在做决策前，请务必通过链接核实官方最新信息。
 :::
 
-## 各厂商速览
+## 维度一：能力基线
 
-| 厂商 | 开源权重？ | 突出强项 | 对 agentic coding 的意义 |
-|---|---|---|---|
-| **Anthropic — Claude** | 否 | 编码、指令遵循、长时自主 | 驱动 Claude Code；agentic coding 的标杆 |
-| **OpenAI — GPT / o 系列** | 否 | 生态广、推理强 | 工具支持最广；有专门推理模型（o 系列） |
-| **Google — Gemini** | 否 | 超大上下文（约 2M）、多模态 | 超大代码库和混合媒体最佳；免费额度慷慨 |
-| **DeepSeek** | 是 | 性价比 | 极便宜；OpenAI/Anthropic 兼容 API；大上下文 |
-| **Moonshot — Kimi** | 是 | 长时程编码 | 开源权重却在编码上比肩闭源；自带 CLI |
-| **Zhipu — GLM** | 是 | 长时自主 agent | 低成本的项目级工程；开源权重 |
+最常被引用的编码基准是 **SWE-bench Verified**——模型自主解决真实 GitHub issue 的比例，越高越好。
 
-## 能力基准
+| 模型 | SWE-bench Verified | 上下文窗口 | 开源权重 | 文档 |
+|---|---|---|---|---|
+| **Claude Fable 5** | ~95% | 1M tokens | 否 | [Anthropic](https://platform.claude.com/docs/en/about-claude/models/overview) |
+| **GPT-5.5** | ~88.7% | 128K tokens | 否 | [OpenAI](https://platform.openai.com/docs/models) |
+| **Claude Opus 4.8** | ~88.6% | 1M tokens | 否 | [Anthropic](https://platform.claude.com/docs/en/about-claude/models/overview) |
+| **Gemini 3.1 Pro** | — | **2M tokens** | 否 | [Google](https://ai.google.dev/gemini-api/docs/models) |
+| **DeepSeek V4** | ~80.6% | 128K tokens | **是** | [DeepSeek](https://api-docs.deepseek.com) |
+| **Kimi K2.6** | ~80.2% | 128K tokens | **是** | [Moonshot](https://platform.moonshot.ai) |
+| **Gemini 2.5 Flash** | — | 1M tokens | 否 | [Google](https://ai.google.dev/gemini-api/docs/models) |
+| **Claude Sonnet 4.6** | — | 1M tokens | 否 | [Anthropic](https://platform.claude.com/docs/en/about-claude/models/overview) |
+| **Claude Haiku 4.5** | — | 200K tokens | 否 | [Anthropic](https://platform.claude.com/docs/en/about-claude/models/overview) |
+| **DeepSeek V4 Flash** | — | 128K tokens | **是** | [DeepSeek](https://api-docs.deepseek.com) |
 
-编码上最常被引用的**能力基数**是 **SWE-bench Verified** —— 模型自主解决真实 GitHub issue 的比例，越高越好。一份公开快照（2026 年中）：
-
-| 模型 | 权重 | SWE-bench Verified |
-|---|---|---|
-| **Claude Fable 5** | 闭源 | ~95.0% * |
-| **OpenAI GPT-5.5** | 闭源 | ~88.7% |
-| **Claude Opus 4.8** | 闭源 | ~88.6% |
-| **Claude Opus 4.7** | 闭源 | ~82.0% |
-| **DeepSeek V4 Pro** | 开源 | ~80.6% |
-| **Kimi K2.6** | 开源 | ~80.2% |
-| **Gemini 3.5 Flash** | 闭源 | ~78.8% |
-
-\* Claude Fable 5 居榜首，但在 2026 年 6 月的一项出口管制指令下被暂停 —— 仅作参考列出。在更难的 **SWE-bench Pro** 上，GLM-5.2 是开源权重模型第一（~62%）；Pro 分数整体更低，且不能与 Verified 直接比较。
-
-::: warning 谨慎看待基准
-分数因评测框架而异、并随每个模型版本变动 —— 把它们当粗略基数，而非圣旨。基准只衡量一个维度；你的真实选择还取决于[成本](/zh/stack/pricing)、速度、上下文大小，以及在*你自己*任务上的可靠性。
+::: warning 谨慎解读 benchmark
+分数因评估工具和模型版本而异。将这些数据视为粗略基线——真实选择还需考虑成本、速度以及在*你的具体任务*上的可靠性。
 :::
 
-**来源：**
-[SWE-bench（官方）](https://www.swebench.com/) ·
+**数据来源：** [SWE-bench 官网](https://www.swebench.com/) ·
 [llm-stats 榜单](https://llm-stats.com/benchmarks/swe-bench-verified) ·
-[BenchLM](https://benchlm.ai/benchmarks/sweVerified) ·
-[Vals AI](https://www.vals.ai/benchmarks/swebench) ·
-[SWE-bench Pro（Morph）](https://www.morphllm.com/swe-bench-pro)。数字为 2026 年中；请在榜单上核对最新值。
+[Morph SWE-bench Pro](https://www.morphllm.com/swe-bench-pro) ·
+[Artificial Analysis](https://artificialanalysis.ai/models)
 
-## 西方前沿实验室
+## 维度二：价格快照
 
-**Anthropic（Claude）** —— 被广泛认为是**编码与 agentic 工作流**最强的家族：细致的指令遵循、可靠的工具使用，以及在长的多步任务上的耐力。产品线从顶层模型往下，到均衡默认，再到快而便宜的层级（见[模型选择](/zh/stack/models)）。它是 [Claude Code](/zh/reference/claude-code) 的运行基座，也是多数编码工具对标的参照。
+每 **100 万 tokens**，输入 / 输出，标准按需计费（2026 年中）：
 
-**OpenAI（GPT + o 系列）** —— 生态最广、型号最全，从前沿通用模型到专门的**推理**模型（o 系列，为艰难的多步问题调优）。如果你想要最多的第三方集成、以及适配几乎任何预算或任务的模型，GPT 是稳妥的多面手。
+| 模型 | 输入 / 1M | 输出 / 1M | 备注 |
+|---|---|---|---|
+| **Gemini 3.1 Flash-Lite** | $0.10 | $0.40 | 预算档 |
+| **DeepSeek V4 Flash** | $0.14 | $0.28 | 最便宜的强能力模型 |
+| **Gemini 2.5 Flash** | $0.15 | $0.60 | Google 快速层 |
+| **Kimi K2.6** | ~$0.60 | ~$2.50 | 开源权重；价格因托管方而异 |
+| **DeepSeek V4 Pro** | $1.74 | $3.48 | 开源权重，高能力 |
+| **Gemini 3.1 Pro** | $2 | $12 | 超大 context |
+| **GPT-5.4** | $2.50 | $15 | OpenAI 主力档 |
+| **Claude Sonnet 4.6** | $3 | $15 | 均衡首选 |
+| **Claude Opus 4.8** | $5 | $25 | 顶级编码能力 |
+| **GPT-5.5** | $5 | $30 | 前沿推理 |
 
-**Google（Gemini）** —— **上下文与多模态**的领先者：约两百万 token 的上下文窗口让它能一次装下很大的代码库或长文档，且原生处理图像/视频。消费端免费额度异常慷慨。当上下文体量或混合媒体成为约束时，选 Gemini。
+::: tip 标价 vs 实际账单
+大多数厂商提供标价之外的大幅折扣：**prompt 缓存**（重复上下文约省 90%）、**批量 API**（异步任务约省 50%）、**Flex 计费**（如 AWS Bedrock Flex 半价）。云平台订阅方案见[订阅与价格](/zh/stack/pricing)。
+:::
 
-## 开源权重的挑战者
-
-一批强力的**开源权重**模型 —— 多来自中国实验室 —— 如今在编码上比肩闭源前沿，成本却只有零头。它们还可自托管，且通常暴露 OpenAI/Anthropic 兼容 API，工具接入几乎无摩擦。
-
-**DeepSeek** —— 性价比标杆。以业界最低的价格之一提供强编码与推理，带思考/非思考模式和大上下文。当成本重要、又想兼容现有工具链时的即插选择。
-
-**Moonshot（Kimi）** —— 其开源模型瞄准**长时程编码**、UI 生成和多 agent 编排，并在编码基准上与顶级闭源模型互有胜负。Moonshot 还出了自己的 CLI（[Kimi Code](/zh/stack/tools)），是一整套栈，而非只有模型。
-
-**Zhipu（GLM）** —— 定位于**项目级软件工程**和长时自主运行（对单个任务连续工作数小时），且成本低。又一个用于 agentic coding 的强力开源权重选项，让你不用付前沿价也能拿到能力。
-
-## 到底怎么选
-
-- **编码 + agentic 可靠性最佳，成本次要** → Claude（顶层或均衡层）
-- **对难题的最深推理** → OpenAI o 系列，或 Claude/GPT 的顶层
-- **超大上下文或多模态** → Gemini
-- **成本最低、仍然强** → DeepSeek、Kimi 或 GLM（开源权重）
-- **自托管 / 数据留在自家** → 一个开源权重模型（DeepSeek / Kimi / GLM）
-
-你并未被锁定。多数[工具](/zh/stack/tools)都允许切换厂商，很多团队用前沿模型做规划、用便宜的开源权重模型做机械执行 —— 就是把[强模型用于思考、快模型用于打字的原则](/zh/stack/models)跨厂商地用起来。
-
-## 来源
-
-数字与产品线为 2026 年中，来自各厂商文档：
-[Claude](https://platform.claude.com/docs/en/about-claude/models/overview) ·
-[OpenAI](https://platform.openai.com/docs/models) ·
-[Gemini](https://ai.google.dev/gemini-api/docs/models) ·
+数据来源：[Claude](https://platform.claude.com/docs/en/about-claude/pricing) ·
+[OpenAI](https://platform.openai.com/docs/pricing) ·
+[Gemini](https://ai.google.dev/gemini-api/docs/pricing) ·
 [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing) ·
 [Kimi](https://platform.moonshot.ai/) ·
-[GLM / Z.ai](https://z.ai/)。请以这些为准核对最新信息。
+[BenchLM](https://benchlm.ai/llm-pricing)
+
+## 维度三：场景适配
+
+将任务与合适的模型层级匹配——并非每个任务都需要最强或最贵的模型。
+
+| 场景 | 推荐层级 | 理由 |
+|---|---|---|
+| 复杂 agentic 任务，长时间自主运行 | Claude Opus 4.8 / GPT-5.5 | 多步骤的可靠性与稳定性 |
+| 日常功能开发 | Claude Sonnet 4.6 / GPT-5.4 | 最佳能力价格比 |
+| 高频补全、机械性任务 | Gemini Flash / Claude Haiku / DeepSeek Flash | 速度 + 极低成本 |
+| 超大代码库（>500K tokens） | Gemini 3.1 Pro | 2M token 上下文窗口 |
+| 自托管 / 数据不出境 | DeepSeek V4 / Kimi K2.6 / GLM-5 | 开源权重，可私有部署 |
+| 预算优先，仍需高能力 | DeepSeek V4 Flash | $0.14/1M 输入——最便宜的强模型 |
+| 复杂算法问题的深度推理 | OpenAI o 系列 / Claude Opus | 内置思维链 |
+
+## 如何组合使用
+
+最有效的方案是在工作的不同阶段使用不同的模型层级：
+
+- **规划与架构** → 顶级模型（Opus 4.8、GPT-5.5）：一次做对，整体更省
+- **编码与迭代** → 中级模型（Sonnet 4.6、GPT-5.4）：速度够、能力够
+- **批量 / 机械性工作** → 快速模型（Haiku、Flash、DeepSeek Flash）：补全、生成测试、样板代码
+
+大多数[工具](/zh/stack/tools)支持按任务或对话切换模型。
+
+## 数据来源
+
+数据截至 2026 年中，请核实：
+[Anthropic 模型](https://platform.claude.com/docs/en/about-claude/models/overview) ·
+[OpenAI 模型](https://platform.openai.com/docs/models) ·
+[Gemini 模型](https://ai.google.dev/gemini-api/docs/models) ·
+[DeepSeek API](https://api-docs.deepseek.com/quick_start/pricing) ·
+[Moonshot Kimi](https://platform.moonshot.ai/) ·
+[Artificial Analysis](https://artificialanalysis.ai/models) ·
+[SWE-bench](https://www.swebench.com/)

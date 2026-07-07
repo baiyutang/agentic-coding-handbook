@@ -1,85 +1,94 @@
 ---
 title: 订阅与价格
-description: 模型 API 价格与订阅套餐的带日期快照 —— 请以官方链接为准。
+description: AI 编码工具订阅计划、模型 API 定价、云平台方案横向对比——附官方链接核实最新价格。数据截至 2026 年 7 月。
 ---
 
 # 订阅与价格
 
-一份帮你对比的快照 —— **不是权威来源**。价格和套餐一直在变、且因地区而异；下面每个数字都链到官方页面。把它当作起点地图，投入前请核对最新数字。
+这是一份帮你做对比的快照——**不是权威来源**。价格随时变化，以下每项数字都附有官方链接。
+请以此为起点，在做决策前核实当前价格。
 
-::: danger 快照 —— 依赖前请核对
-下面所有数字均为**截至 2026 年 7 月**，采自各厂商文档。AI 定价变化很快。**请务必查看所链官方页面获取当前价格。**
+::: danger 快照——用前核实
+以下数据均为 **2026 年 7 月** 快照。AI 价格变动频繁。**在使用前务必通过链接核实官方当前价格。**
 :::
 
-## 模型 API 价格
+## 编码工具订阅
 
-每 **100 万 token**，输入 / 输出，标准档（截至 2026-07）：
+主流 [AI 编码工具](/zh/stack/tools)的收费方式：
+
+| 工具 | 免费额度 | 个人付费 | 团队 / 企业 | 计费模式 | 官方定价 |
+|---|---|---|---|---|---|
+| [GitHub Copilot](https://github.com/features/copilot) | 有 | $10–$39/月 | $19–$39/用户/月 | Credits 制（2026.6 起） | [方案](https://github.com/features/copilot/plans) |
+| [Cursor](https://cursor.com) | 有 | $20–$200/月 | $40/用户/月 | 按席位 | [定价](https://cursor.com/pricing) |
+| [Windsurf](https://codeium.com/windsurf) | 有 | $20–$200/月 | $40/用户/月 | 按席位 | [定价](https://codeium.com/pricing) |
+| [Claude Code](https://claude.ai/code) | — | $100/月（Max） | 企业合同 | 按用量 / 订阅 | [定价](https://claude.com/pricing) |
+| [AWS Q Developer](https://aws.amazon.com/q/developer/) | 50 次/月 | $19/用户/月 | $19/用户/月 | 按席位 | [定价](https://aws.amazon.com/q/developer/pricing/) |
+| [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview) | 无（2026.6 后取消） | $19/月 Standard | $45/用户 Enterprise | 按席位 | [定价](https://cloud.google.com/gemini/docs/codeassist/pricing) |
+| [Qoder CN](https://lingma.aliyun.com) | 有 | Credits 制 | Credits + VPC 方案 | 按席位 / Credits | [定价](https://lingma.aliyun.com/lingma/pricing) |
+| OpenCode / Aider / Cline | 完全免费 | 仅 BYOK | 仅 BYOK | 只付模型 API | — |
+
+## 模型 API 定价
+
+每 **100 万 tokens**，输入 / 输出，标准按需计费：
 
 | 模型 | 输入 | 输出 | 备注 |
 |---|---|---|---|
-| **Claude Fable 5** | $10 | $50 | 顶层 |
+| **Claude Fable 5** | $10 | $50 | 顶级 |
 | **Claude Opus 4.8** | $5 | $25 | 高能力 |
-| **Claude Sonnet 5** | $2 → $3 | $10 → $15 | 优惠价至 2026-08-31 |
-| **Claude Haiku 4.5** | $1 | $5 | 快 / 便宜 |
-| **OpenAI GPT-5.5** | $5 | $30 | 前沿 |
-| **OpenAI GPT-5.4** | $2.50 | $15 | 主流 |
-| **OpenAI GPT-5.4 mini** | $0.75 | $4.50 | 生产性价比 |
-| **OpenAI o4-mini** | $1.10 | $4.40 | 性价比推理 |
-| **Gemini 3.1 Pro** | $2 | $12 | 超 200K 上下文更高；约 2M 上下文 |
+| **Claude Sonnet 4.6** | $3 | $15 | 均衡首选 |
+| **Claude Haiku 4.5** | $1 | $5 | 快速 / 便宜 |
+| **GPT-5.5** | $5 | $30 | 前沿 |
+| **GPT-5.4** | $2.50 | $15 | 主力档 |
+| **GPT-5.4 mini** | $0.75 | $4.50 | 生产性价比 |
+| **Gemini 3.1 Pro** | $2 | $12 | ~2M 上下文 |
 | **Gemini 3 Flash** | $0.50 | $3 | 快速默认 |
-| **Gemini 3.1 Flash-Lite** | $0.25 | $1.50 | 预算档 |
+| **Gemini 3.1 Flash-Lite** | $0.10 | $0.40 | 预算档 |
 | **DeepSeek V4 Pro** | $1.74 | $3.48 | 开源权重 |
-| **DeepSeek V4 Flash** | $0.14 | $0.28 | 最便宜之一 |
-| **Kimi K2.6** | ~$0.60 | ~$2.50 | 开源权重；随托管方而异 |
+| **DeepSeek V4 Flash** | $0.14 | $0.28 | 最便宜的强模型 |
+| **Kimi K2.6** | ~$0.60 | ~$2.50 | 开源权重；价格因托管方而异 |
 | **Zhipu GLM-5** | $0.60 | $1.92 | 开源权重 |
 
-来源：
-[Claude](https://platform.claude.com/docs/en/about-claude/pricing) ·
+数据来源：[Claude](https://platform.claude.com/docs/en/about-claude/pricing) ·
 [OpenAI](https://platform.openai.com/docs/pricing) ·
 [Gemini](https://ai.google.dev/gemini-api/docs/pricing) ·
 [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing) ·
 [Kimi](https://platform.moonshot.ai/) ·
-[GLM](https://z.ai/)。
+[GLM](https://z.ai/)
 
-::: tip 实际账单比标价低
-多数厂商提供上表没体现的大幅折扣：**提示/前缀缓存**（重复上下文常打约一折）、**批处理 API**（异步任务约五折）、**免费额度**（如 DeepSeek 的注册赠额、Gemini 的免费 Flash）。如何真正花更少，见[成本与效率](/zh/stack/cost)。
+## 云平台模型订阅
+
+这些平台让你在同一计费关系下使用多个模型——适合已在其生态内或希望灵活切换提供商的团队。
+
+| 平台 | 覆盖模型 | 代表定价 | 亮点 | 官方页面 |
+|---|---|---|---|---|
+| [AWS Bedrock](https://aws.amazon.com/bedrock/) | Claude / Llama / Nova / Mistral | Sonnet 4.6: $3/$15 per 1M；**Flex tier 半价** | Provisioned 节省 15–40%（需锁定 1–6 个月）；批量推理半价 | [定价](https://aws.amazon.com/bedrock/pricing/) |
+| [Google Vertex AI](https://cloud.google.com/vertex-ai) | Gemini 全系 | Gemini 3.1 Pro: $2/$12 per 1M | 缓存折扣；2M token 上下文 | [定价](https://cloud.google.com/vertex-ai/pricing) |
+| [阿里云百炼](https://bailian.aliyun.com) | 通义系列 + 第三方 | 按输入长度分级计费；批量折扣 | 国内合规；与 Qoder CN 打通 | [定价](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| [火山方舟 Coding Plan](https://www.volcengine.com/product/ark) | 豆包 / DeepSeek / Kimi / GLM（6 款） | Lite ¥10/月 · Pro ¥50/月（前两月活动价） | 模型自由切换；兼容 Claude Code、Cursor 等 30+ 工具 | [定价](https://www.volcengine.com/docs/82379/1544106) |
+
+::: tip 火山方舟 Coding Plan——国内开发者高性价比之选
+一次订阅覆盖豆包、DeepSeek、Kimi、GLM。通过 API 与 Claude Code、Cursor 等主流工具直接对接。
+Lite 套餐前两个月低至 ¥10/月。
 :::
 
-## 消费端订阅
+## BYOK：你实际支付多少
 
-用于对话/助手（与 API 计费不同）：
+如果使用自带 key 的工具（OpenCode、Aider、Cline），唯一成本是模型 API。典型开发者用量：
 
-| 套餐 | 每月价格 | 备注 |
-|---|---|---|
-| **Google AI Plus** | $7.99 | Gemini 入门 |
-| **Google AI Pro** | $19.99 | Gemini Pro 权限 |
-| **Google AI Ultra** | $99.99 起 | 最高额度 |
-| **ChatGPT**（Free / Plus / Pro） | 见官方 | [openai.com/chatgpt/pricing](https://openai.com/chatgpt/pricing/) |
-| **Claude**（Free / Pro / Max） | 见官方 | [claude.com/pricing](https://claude.com/pricing) |
+| 使用强度 | 估算月费 |
+|---|---|
+| 轻度（每天几小时，中级模型） | $5–$15 |
+| 中度（日常主力，Sonnet 级别） | $15–$50 |
+| 重度（全天 agentic，顶级模型） | $50–$200+ |
 
-Gemini 数字来自 [gemini.google/subscriptions](https://gemini.google/subscriptions/)。ChatGPT 和 Claude 的消费端档位变动频繁，我们选择给链接而非引用具体数字 —— 请查官方页面。
+对机械性任务从顶级模型切换到 DeepSeek Flash，账单可降低 10–20 倍。
 
-## 编码工具套餐
+## 如何降低成本
 
-各[工具](/zh/stack/tools)如何计费（具体请以各站为准）：
+- **Prompt 缓存** —— 大多数厂商对重复上下文提供约 90% 折扣，适用于大型系统提示或文档。
+- **批量 API** —— 异步工作（生成测试、写文档、批量重构）在 OpenAI 和 Anthropic 约半价。
+- **AWS Bedrock Flex** —— Claude 按需价格半价，无锁定期，已在 AWS 上的团队可直接使用。
+- **模型分层** —— 规划用顶级模型，编码用中级，补全用快速/廉价模型。详见[成本与效率](/zh/stack/cost)。
+- **开源权重** —— DeepSeek 和 Kimi 自托管：基础设施成本之外无 token 费。
 
-| 工具 | 模型 | 如何计费 |
-|---|---|---|
-| **Claude Code** | Anthropic | 含在 Claude Pro/Max 中，或按量 API |
-| **Cursor** | 多厂商 | 免费档 + 付费 Pro/Business —— [cursor.com/pricing](https://cursor.com/pricing) |
-| **GitHub Copilot** | 多厂商 | 免费档 + Pro/Business/Enterprise —— [github.com/features/copilot/plans](https://github.com/features/copilot/plans) |
-| **Windsurf** | 多厂商 | 免费档 + 付费 —— [windsurf.com/pricing](https://windsurf.com/pricing) |
-| **Qoder** | "最新模型" | 免费两周 Pro 试用，之后按额度套餐 —— [qoder.com](https://qoder.com) |
-| **Trae** | 多厂商 | 见 [trae.ai](https://www.trae.ai) |
-| **Kimi Code** | Moonshot Kimi | 按量 API + 订阅档 —— [platform.moonshot.ai](https://platform.moonshot.ai/) |
-| **Aider** | 自带 key | 免费开源；你付自己模型的 API |
-| **Cline** | 自带 key | 免费开源扩展；你付自己模型的 API |
-
-## 怎么读这张表
-
-- **API 计费**随用量增长 —— 最适合自动化、CI 和团队；模型选择是直接的成本杠杆（见[成本与效率](/zh/stack/cost)）。
-- **订阅**固定且可预测 —— 最适合稳定的个人使用。
-- **开源权重模型**（DeepSeek、Kimi、GLM）可自托管，用你运行的基础设施换掉按 token 的账单。
-- **自带 key 的工具**（Aider、Cline）本身免费 —— 你只付模型的钱。
-
-拿不准时，先从免费档或订阅开始，测一周你的真实用量，再决定 API 计费还是更高档套餐对你的模式更省。
+如无把握：先用免费层，测量一周真实用量，再决定 API 计费还是更高套餐更划算。
