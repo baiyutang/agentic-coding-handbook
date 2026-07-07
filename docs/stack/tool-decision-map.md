@@ -19,8 +19,8 @@ matches your current question.
 | Build a large feature / cross-file refactor | CLI Agent — [Claude Code](https://claude.ai/code), [OpenCode](https://opencode.ai) | Full repo context, high autonomy, scriptable |
 | Code daily with smart inline completions | AI-native IDE — [Cursor](https://cursor.com), [Windsurf](https://codeium.com/windsurf) | Tight edit loop, visual diffs |
 | Add AI without changing my editor | Extension — [Copilot](https://github.com/features/copilot), [Cline](https://github.com/cline/cline) | Zero switching cost; VS Code, JetBrains, Neovim |
-| Assign a ticket and let AI resolve it | Autonomous — [OpenHands](https://github.com/All-Hands-AI/OpenHands), [Qoder](https://qoder.ai) | Fully autonomous issue resolution |
-| CN-region / data-residency projects | Cloud vendor — [Qoder CN](https://lingma.aliyun.com), [ArkClaw](https://www.volcengine.com/product/ark) | Domestic compliance, CN-region data |
+| Assign a ticket and let AI resolve it | Autonomous — [OpenHands](https://github.com/All-Hands-AI/OpenHands), [Goose](https://github.com/block/goose) | Fully autonomous issue resolution |
+| CN-region / data-residency projects | Cloud vendor — [Qoder](https://lingma.aliyun.com) (CN version), [CodeBuddy](https://www.codebuddy.ai) | Domestic compliance, CN-region data |
 
 ## Entry B: By Constraints
 
@@ -63,8 +63,8 @@ matches your current question.
 | [Kilo Code](https://kilocode.ai) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | [AWS Q Developer](https://aws.amazon.com/q/developer/) | — | — | — | — | — | — |
 | [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview) | — | — | ✅ native | — | — | — |
-| [Qoder CN](https://lingma.aliyun.com) | — | — | — | — | — | Qwen |
-| [ArkClaw](https://www.volcengine.com/product/ark) | — | — | — | ✅ | ✅ | Doubao / GLM |
+| [CodeBuddy](https://www.codebuddy.ai) | — | — | — | ✅ | — | Hunyuan |
+| [Qoder](https://lingma.aliyun.com) | — | — | — | — | — | Qwen |
 | [OpenHands](https://github.com/All-Hands-AI/OpenHands) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 ## Classic Combinations

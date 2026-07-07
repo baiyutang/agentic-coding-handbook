@@ -13,10 +13,8 @@ whatever you installed first.
 
 - **[AI Coding Tools Compared](/stack/tools)** — CLI agents, AI-native IDEs, and editor
   extensions: how they differ and how to choose.
-- **[Choosing a Model](/stack/models)** — Match the model to the task. Strong models for
-  reasoning, fast models for volume.
-- **[Cost & Efficiency](/stack/cost)** — Understand what you're paying for and how to get
-  more out of every token.
+- **[Model Choice & Cost](/stack/models)** — Match the model tier to the task, keep context
+  lean, and spend where it buys real leverage.
 - **[The 10x Engineer](/stack/going-10x)** — A checklist that turns these choices and the
   methodology into a real productivity multiplier.
 

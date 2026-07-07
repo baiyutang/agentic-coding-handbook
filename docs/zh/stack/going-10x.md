@@ -44,7 +44,7 @@ Agentic coding 不是靠让你打字更快来实现 10x 的。它倍增你的方
 **保持精简**
 - [ ] 一个任务一个会话；用 [`/clear` 和 `/compact`](/zh/guides/context-management) 对抗漂移
 - [ ] 只拉入刚好够用的上下文，而非整个仓库
-- [ ] 把模型预算花在思考是瓶颈的地方 —— [成本与效率](/zh/stack/cost)
+- [ ] 把模型预算花在思考是瓶颈的地方 —— [模型选择与成本](/zh/stack/models)
 
 ## 复利效应
 

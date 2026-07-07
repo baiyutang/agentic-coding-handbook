@@ -48,7 +48,7 @@ Work through these; each links to the chapter that goes deep.
 **Keep it lean**
 - [ ] One task per session; [`/clear` and `/compact`](/guides/context-management) to fight drift
 - [ ] Pull in just enough context, not the whole repo
-- [ ] Spend model budget where thinking is the bottleneck — [cost & efficiency](/stack/cost)
+- [ ] Spend model budget where thinking is the bottleneck — [model choice & cost](/stack/models)
 
 ## The Compounding Effect
 

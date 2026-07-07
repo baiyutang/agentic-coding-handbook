@@ -56,8 +56,8 @@ AI coding assistants built by major cloud providers, integrated with their broad
 
 - **Examples:** [AWS Q Developer](https://aws.amazon.com/q/developer/) ·
   [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview) ·
-  [Qoder CN](https://lingma.aliyun.com) (Alibaba, formerly Tongyi Lingma) ·
-  [ArkClaw](https://www.volcengine.com/product/ark) (ByteDance/Volcengine)
+  [CodeBuddy](https://www.codebuddy.ai) (Tencent Cloud) ·
+  [Qoder](https://lingma.aliyun.com) (Alibaba; CN version: Qoder CN, formerly Tongyi Lingma)
 - **Strengths:** Enterprise SSO/audit, tight cloud ecosystem integration, compliance-friendly,
   team management
 - **Trade-offs:** Tied to one vendor's ecosystem; typically less flexible on model choice
@@ -69,7 +69,7 @@ Platforms designed for fully autonomous, long-running software engineering tasks
 "assign a ticket" than "pair program."
 
 - **Examples:** [OpenHands](https://github.com/All-Hands-AI/OpenHands) ·
-  [Goose](https://github.com/block/goose) · [Qoder](https://qoder.ai)
+  [Goose](https://github.com/block/goose)
 - **Strengths:** Very high autonomy, persistent memory, designed for issue-resolution and
   feature-sized tasks
 - **Trade-offs:** Less human-in-the-loop; newer and less standardized
@@ -94,8 +94,8 @@ Platforms designed for fully autonomous, long-running software engineering tasks
 | [Kilo Code](https://kilocode.ai) | Extension | Apache 2.0 | BYOK | Free (BYOK) | VS Code + JetBrains support |
 | [AWS Q Developer](https://aws.amazon.com/q/developer/) | Cloud Vendor | Proprietary | AWS models | Free–$19/user | Deep AWS integration, security scanning |
 | [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview) | Cloud Vendor | Proprietary | Gemini | $19–$45/user | GCP-native; Gemini 2.5 Pro |
-| [Qoder CN](https://lingma.aliyun.com) | Cloud Vendor | Proprietary | Qwen + others | Credits-based | Alibaba-backed; CN-region compliance |
-| [ArkClaw](https://www.volcengine.com/product/ark) | Cloud Vendor | Proprietary | Doubao/DeepSeek/Kimi/GLM | See Coding Plan | ByteDance; 6-model switching |
+| [CodeBuddy](https://www.codebuddy.ai) | Cloud Vendor | Proprietary | DeepSeek + Hunyuan | Free–¥198/user/mo | Tencent Cloud; VS Code, JetBrains, WeChat DevTools |
+| [Qoder](https://lingma.aliyun.com) | Cloud Vendor | Proprietary | Qwen + others | Credits-based | Alibaba; desktop + CLI + IDE; CN (Qoder CN) & intl versions |
 | [OpenHands](https://github.com/All-Hands-AI/OpenHands) | Autonomous | MIT | BYOK | Free (BYOK) | 68K ⭐; resolves 50%+ real GitHub issues |
 | [Goose](https://github.com/block/goose) | Autonomous | Apache 2.0 | BYOK | Free (BYOK) | Editor-agnostic; Agentic AI Foundation |
 
@@ -112,8 +112,8 @@ Ollama. Zero data transmission, zero per-token cost.
 | AI blended into a full editor | AI-native IDE (Cursor, Windsurf) |
 | To keep your current editor | Extension (Copilot, Cline, Continue.dev) |
 | Enterprise SSO / audit / compliance | Cloud vendor (Q Developer, Gemini Code Assist) |
-| CN data residency / domestic compliance | Qoder CN, ArkClaw |
-| Fully autonomous issue resolution | Autonomous platform (OpenHands, Qoder) |
+| CN data residency / domestic compliance | Qoder (CN version), CodeBuddy |
+| Fully autonomous issue resolution | Autonomous platform (OpenHands, Goose) |
 | Lowest cost, open-source first | OpenCode / Aider / Cline + open-weight model BYOK |
 | Self-hosting, data never leaves servers | Tabby + local model (Ollama) |
 | Scriptable / CI-friendly automation | CLI Agent |

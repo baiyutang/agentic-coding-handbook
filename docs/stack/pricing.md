@@ -26,7 +26,7 @@ How the major [AI coding tools](/stack/tools) charge:
 | [Claude Code](https://claude.ai/code) | — | $100/mo (Max) | Enterprise contract | Usage / subscription | [Pricing](https://claude.com/pricing) |
 | [AWS Q Developer](https://aws.amazon.com/q/developer/) | 50 req/mo | $19/user/mo | $19/user/mo | Per seat | [Pricing](https://aws.amazon.com/q/developer/pricing/) |
 | [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview) | None (ended Jun 2026) | $19/mo Standard | $45/user Enterprise | Per seat | [Pricing](https://cloud.google.com/gemini/docs/codeassist/pricing) |
-| [Qoder CN](https://lingma.aliyun.com) | Yes | Credits-based | Credits + VPC plans | Per seat / Credits | [Pricing](https://lingma.aliyun.com/lingma/pricing) |
+| [Qoder](https://lingma.aliyun.com) | Yes | Credits-based | Credits + VPC plans | Per seat / Credits | [Pricing](https://lingma.aliyun.com/lingma/pricing) |
 | OpenCode / Aider / Cline | Fully free | BYOK | BYOK | Pay your model API | — |
 
 ## Model API Pricing
@@ -66,7 +66,7 @@ you're already in their ecosystem or want flexibility across providers.
 |---|---|---|---|---|
 | [AWS Bedrock](https://aws.amazon.com/bedrock/) | Claude / Llama / Nova / Mistral | Sonnet 4.6: $3/$15 per 1M; **Flex tier: 50% off** | Provisioned saves 15–40% (1–6 mo commitment); batch at 50% off | [Pricing](https://aws.amazon.com/bedrock/pricing/) |
 | [Google Vertex AI](https://cloud.google.com/vertex-ai) | Gemini full lineup | Gemini 3.1 Pro: $2/$12 per 1M | Context caching discounts; 2M token window | [Pricing](https://cloud.google.com/vertex-ai/pricing) |
-| [阿里云百炼](https://bailian.aliyun.com) | Qwen series + third-party | Tiered by input length; batch discounts | CN-region compliance; integrates with Qoder CN | [Pricing](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| [阿里云百炼](https://bailian.aliyun.com) | Qwen series + third-party | Tiered by input length; batch discounts | CN-region compliance; integrates with Qoder | [Pricing](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | [火山方舟 Coding Plan](https://www.volcengine.com/product/ark) | Doubao / DeepSeek / Kimi / GLM (6 models) | Lite ¥10/mo · Pro ¥50/mo (first 2 months) | Switch models freely; works with Claude Code, Cursor, 30+ tools | [Pricing](https://www.volcengine.com/docs/82379/1544106) |
 
 ::: tip 火山方舟 Coding Plan — cost-effective option for CN developers
@@ -95,7 +95,7 @@ Switching from a top model to DeepSeek Flash for mechanical tasks can cut bills 
   off on OpenAI and Anthropic.
 - **AWS Bedrock Flex** — 50% off on-demand for Claude, no commitment. Good if you're on AWS.
 - **Model tiering** — use top models for planning, mid-tier for coding, fast/cheap for
-  completions. See [Cost & Efficiency](/stack/cost).
+  completions. See [Model Choice & Cost](/stack/models).
 - **Open weights** — DeepSeek and Kimi self-hosted: no per-token bill after infra cost.
 
 When in doubt: start on a free tier, measure one week of real usage, then decide whether API

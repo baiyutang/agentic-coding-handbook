@@ -18,8 +18,8 @@ description: 场景驱动的 AI 编码工具选型指南——按任务类型、
 | 开发大型功能 / 跨文件重构 | CLI Agent —— [Claude Code](https://claude.ai/code)、[OpenCode](https://opencode.ai) | 完整仓库上下文，高自主性，可脚本化 |
 | 日常编码 + 智能行内补全 | AI 原生 IDE —— [Cursor](https://cursor.com)、[Windsurf](https://codeium.com/windsurf) | 编辑循环紧凑，可视化 diff |
 | 不换编辑器，只加 AI | 插件 —— [Copilot](https://github.com/features/copilot)、[Cline](https://github.com/cline/cline) | 零切换成本；支持 VS Code、JetBrains、Neovim |
-| 分配工单，让 AI 自主解决 | 自主平台 —— [OpenHands](https://github.com/All-Hands-AI/OpenHands)、[Qoder](https://qoder.ai) | 完全自主处理 issue |
-| 国内合规 / 数据驻留项目 | 云厂商 —— [Qoder CN](https://lingma.aliyun.com)、[ArkClaw](https://www.volcengine.com/product/ark) | 国内合规，数据留在境内 |
+| 分配工单，让 AI 自主解决 | 自主平台 —— [OpenHands](https://github.com/All-Hands-AI/OpenHands)、[Goose](https://github.com/block/goose) | 完全自主处理 issue |
+| 国内合规 / 数据驻留项目 | 云厂商 —— [Qoder](https://lingma.aliyun.com)（国内版）、[CodeBuddy](https://www.codebuddy.ai) | 国内合规，数据留在境内 |
 
 ## 入口 B：按约束条件
 
@@ -62,8 +62,8 @@ description: 场景驱动的 AI 编码工具选型指南——按任务类型、
 | [Kilo Code](https://kilocode.ai) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | [AWS Q Developer](https://aws.amazon.com/q/developer/) | — | — | — | — | — | — |
 | [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview) | — | — | ✅ 原生 | — | — | — |
-| [Qoder CN](https://lingma.aliyun.com) | — | — | — | — | — | 通义 |
-| [ArkClaw](https://www.volcengine.com/product/ark) | — | — | — | ✅ | ✅ | 豆包 / GLM |
+| [CodeBuddy](https://www.codebuddy.ai) | — | — | — | ✅ | — | 混元 |
+| [Qoder](https://lingma.aliyun.com) | — | — | — | — | — | 通义 |
 | [OpenHands](https://github.com/All-Hands-AI/OpenHands) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 ## 经典组合推荐
