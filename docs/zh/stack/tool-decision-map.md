@@ -19,6 +19,7 @@ description: 场景驱动的 AI 编码工具选型指南——按任务类型、
 | 日常编码 + 智能行内补全 | AI 原生 IDE —— [Cursor](https://cursor.com)、[Windsurf](https://codeium.com/windsurf) | 编辑循环紧凑，可视化 diff |
 | 不换编辑器，只加 AI | 插件 —— [Copilot](https://github.com/features/copilot)、[Cline](https://github.com/cline/cline) | 零切换成本；支持 VS Code、JetBrains、Neovim |
 | 分配工单，让 AI 自主解决 | 自主平台 —— [OpenHands](https://github.com/All-Hands-AI/OpenHands)、[Goose](https://github.com/block/goose) | 完全自主处理 issue |
+| 手机发指令 / 移动端审查进度 | [Claude Code Remote Control](https://code.claude.com/docs/en/remote-control) + Claude App · [Cosyra](https://cosyra.com) | Agent 在本机或云容器里持续运行，手机只是控制窗口 |
 | 国内合规 / 数据驻留项目 | 云厂商 —— [Qoder](https://lingma.aliyun.com)（国内版）、[CodeBuddy](https://www.codebuddy.ai) | 国内合规，数据留在境内 |
 
 ## 入口 B：按约束条件
@@ -32,6 +33,8 @@ description: 场景驱动的 AI 编码工具选型指南——按任务类型、
 | 想同时用多个模型，在国内 | [火山方舟 Coding Plan](https://www.volcengine.com/product/ark) —— 6 款模型，¥10/月起 |
 | 已深度在 AWS 上 | [AWS Bedrock](https://aws.amazon.com/bedrock/)（模型）+ [Q Developer](https://aws.amazon.com/q/developer/)（IDE 层） |
 | 已在 GCP 上 | [Vertex AI](https://cloud.google.com/vertex-ai)（模型）+ [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview) |
+| 有固定工作机，想用手机发指令 | [Claude Code Remote Control](https://code.claude.com/docs/en/remote-control) —— session 留在本机，手机是窗口；[Nimbalyst](https://nimbalyst.com) 提供更丰富的移动端 UI |
+| 没有固定机器，纯移动办公 | [Cosyra](https://cosyra.com) —— 开一个持久云容器，预装 Claude Code / OpenCode / Codex CLI |
 
 ## 入口 C：按模型偏好
 

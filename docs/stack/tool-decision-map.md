@@ -20,6 +20,7 @@ matches your current question.
 | Code daily with smart inline completions | AI-native IDE — [Cursor](https://cursor.com), [Windsurf](https://codeium.com/windsurf) | Tight edit loop, visual diffs |
 | Add AI without changing my editor | Extension — [Copilot](https://github.com/features/copilot), [Cline](https://github.com/cline/cline) | Zero switching cost; VS Code, JetBrains, Neovim |
 | Assign a ticket and let AI resolve it | Autonomous — [OpenHands](https://github.com/All-Hands-AI/OpenHands), [Goose](https://github.com/block/goose) | Fully autonomous issue resolution |
+| Issue commands from mobile / review on the go | [Claude Code Remote Control](https://code.claude.com/docs/en/remote-control) + Claude app · [Cosyra](https://cosyra.com) | Agent keeps running on your machine or a cloud container; phone is just the window |
 | CN-region / data-residency projects | Cloud vendor — [Qoder](https://lingma.aliyun.com) (CN version), [CodeBuddy](https://www.codebuddy.ai) | Domestic compliance, CN-region data |
 
 ## Entry B: By Constraints
@@ -33,6 +34,8 @@ matches your current question.
 | Use multiple models, based in CN | [火山方舟 Coding Plan](https://www.volcengine.com/product/ark) — 6 models, ¥10/mo intro |
 | Already deeply on AWS | [AWS Bedrock](https://aws.amazon.com/bedrock/) (models) + [Q Developer](https://aws.amazon.com/q/developer/) (IDE layer) |
 | Already on GCP | [Vertex AI](https://cloud.google.com/vertex-ai) (models) + [Gemini Code Assist](https://cloud.google.com/gemini/docs/codeassist/overview) |
+| Have a fixed workstation, want to code from phone | [Claude Code Remote Control](https://code.claude.com/docs/en/remote-control) — session stays on your machine, phone is the window; [Nimbalyst](https://nimbalyst.com) for richer mobile UI |
+| No fixed machine, fully mobile | [Cosyra](https://cosyra.com) — provisions a persistent cloud container with Claude Code / OpenCode / Codex CLI pre-installed |
 
 ## Entry C: By Model Preference
 
